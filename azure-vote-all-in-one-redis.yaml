@@ -39,7 +39,7 @@ kind: Deployment
 metadata:
   name: azure-vote-front
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: azure-vote-front
@@ -76,6 +76,6 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
+  - port: 80
   selector:
     app: azure-vote-front
